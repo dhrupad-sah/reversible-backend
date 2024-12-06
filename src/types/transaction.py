@@ -16,3 +16,4 @@ class TransferRequest(BaseModel):
 
 class ForceApprovalRequest(BaseModel):
     transaction_id: str
+    to_wallet: str
