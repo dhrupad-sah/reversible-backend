@@ -28,8 +28,8 @@ async def raise_dispute(wallet: WalletType, request: DisputeRequest):
         dispute_data = {
             "transactionId": request.transaction_id,
             "intendedRecipient": request.to_wallet,
-            "proofTitle": request.proofTitle,
-            "proofContent": request.proofContent,
+            "proof_title": request.proofTitle,
+            "proof_content": request.proofContent,
             "verdict": False
         }
         supabase_client.table("disputes").insert(dispute_data).execute()
